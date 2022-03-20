@@ -1,15 +1,6 @@
 version: '3'
 
 services:
-  netcat_listener:
-    container_name: netcat_listener
-    restart: always 
-    build: . 
-    depends_on: 
-      - nginx-server
-    ports:
-    - "8003:8003" 
-
   nginx-server:
     image: fabiocicerchia/nginx-lua
     container_name: my_nginx_server 
